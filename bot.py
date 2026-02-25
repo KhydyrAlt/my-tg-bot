@@ -297,7 +297,6 @@ async def handle_any_message(message: types.Message, state: FSMContext):
 async def main():
     print("="*50)
     print("🚀 Бот для вызова сисадмина запущен!")
-    print(f"🤖 Токен: {TOKEN[:15]}... (скрыт)")
     print(f"👤 Админ ID: {ADMIN_ID}")
     print("="*50)
     await dp.start_polling(bot)
