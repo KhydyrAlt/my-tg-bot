@@ -13,11 +13,13 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
-BOT_TOKEN = os.getenv('BOT_TOKEN')
-if not BOT_TOKEN:
-    raise ValueError("Токен не найден! Добавь BOT_TOKEN в переменные окружения")
-    
+
 ADMIN_ID = 911966345  # Твой Telegram ID (число)
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+
+if not BOT_TOKEN:
+    print("❌ Токен не найден!")
+    exit(1)
 # ---------------------------------------------------------
 
 # Настройка логирования
