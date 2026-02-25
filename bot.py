@@ -26,7 +26,7 @@ if not BOT_TOKEN:
 logging.basicConfig(level=logging.INFO)
 
 # Создаем объекты бота и диспетчера
-bot = Bot(token=TOKEN)
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
 # --- База данных SQLite ---
