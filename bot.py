@@ -1,6 +1,7 @@
 import asyncio
 import sqlite3
 import logging
+import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import (
@@ -12,8 +13,10 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
-# ---------- ТВОИ ДАННЫЕ (ЗАМЕНИ ЭТИ ДВЕ СТРОКИ) ----------
-TOKEN = "8548637441:AAHhDm6i1bQihtWmKffh9z4CauXu2I-tk-E"  # Твой токен от @BotFather
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+if not BOT_TOKEN:
+    raise ValueError("Токен не найден! Добавь BOT_TOKEN в переменные окружения")
+    
 ADMIN_ID = 911966345  # Твой Telegram ID (число)
 # ---------------------------------------------------------
 
